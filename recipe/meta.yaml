@@ -33,6 +33,10 @@ requirements:
     - r-pander
     - r-pryr
     - r-rapportools
+    - r-checkmate
+    - r-dplyr
+    - r-magick
+    - r-tidyr
   run:
     - r-base
     - r-rcurl
@@ -42,6 +46,10 @@ requirements:
     - r-pander
     - r-pryr
     - r-rapportools
+    - r-checkmate
+    - r-dplyr
+    - r-magick
+    - r-tidyr
 
 test:
   commands:
