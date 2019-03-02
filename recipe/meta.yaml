@@ -1,4 +1,4 @@
-{% set version = '0.8.8' %}
+{% set version = '0.9.2' %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,12 +10,11 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/summarytools_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/summarytools/summarytools_{{ version }}.tar.gz
-  sha256: 8b7f14d9241463bff292a4af11796fbe80c91e72dd58ae18b77fa5154d35037d
+  sha256: 7ec7571b496a2054478fd877d64e4f7d1292040eb233b4cb4f0ee76b629c03e1
 
 build:
-  noarch: generic
   merge_build_host: True  # [win]
-  number: 1000
+  number: 0
   noarch: generic
   rpaths:
     - lib/R/lib/
@@ -23,25 +22,33 @@ build:
 
 requirements:
   build:
-
+    - {{posix}}zip               # [win]
   host:
     - r-base
     - r-rcurl
+    - r-checkmate
+    - r-dplyr
     - r-htmltools
     - r-lubridate
+    - r-magick
     - r-matrixstats
     - r-pander
     - r-pryr
     - r-rapportools
+    - r-tidyr
   run:
     - r-base
     - r-rcurl
+    - r-checkmate
+    - r-dplyr
     - r-htmltools
     - r-lubridate
+    - r-magick
     - r-matrixstats
     - r-pander
     - r-pryr
     - r-rapportools
+    - r-tidyr
 
 test:
   commands:
@@ -66,20 +73,22 @@ extra:
 # Package: summarytools
 # Type: Package
 # Title: Tools to Quickly and Neatly Summarize Data
-# Version: 0.8.8
-# Author: Dominic Comtois
-# Maintainer: Dominic Comtois <dominic.comtois@gmail.com>
+# Version: 0.9.2
+# Authors@R: person("Dominic", "Comtois", email = "dominic.comtois@gmail.com",  role = c("aut", "cre"))
 # Description: Data frame summaries, cross-tabulations, weight-enabled frequency tables and common univariate statistics in concise tables available in a variety of formats (plain ASCII, Markdown and HTML). A good  point-of-entry for exploring data, both for experienced and new R users.
-# Imports: grDevices, htmltools, lubridate, matrixStats, methods, pander, pryr, rapportools, RCurl, utils
+# Imports: checkmate, dplyr, grDevices, htmltools, lubridate, magick, matrixStats, methods, pander, pryr, rapportools, RCurl, stats, tidyr, utils
 # Suggests: rstudioapi, knitr, rmarkdown
+# Depends: R (>= 2.10)
 # VignetteBuilder: knitr
 # LazyData: true
 # License: GPL-2
 # URL: https://github.com/dcomtois/summarytools
 # BugReports: https://github.com/dcomtois/summarytools/issues
 # Encoding: UTF-8
-# RoxygenNote: 6.1.0
+# RoxygenNote: 6.1.1
 # NeedsCompilation: no
-# Packaged: 2018-10-07 09:09:37 UTC; Dominic
+# Packaged: 2019-02-22 00:14:51 UTC; dominic
+# Author: Dominic Comtois [aut, cre]
+# Maintainer: Dominic Comtois <dominic.comtois@gmail.com>
 # Repository: CRAN
-# Date/Publication: 2018-10-07 09:50:03 UTC
+# Date/Publication: 2019-02-22 09:10:03 UTC
