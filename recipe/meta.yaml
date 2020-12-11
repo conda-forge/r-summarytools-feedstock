@@ -1,4 +1,4 @@
-{% set version = "0.9.6" %}
+{% set version = "0.9.8" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,11 +10,11 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/summarytools_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/summarytools/summarytools_{{ version }}.tar.gz
-  sha256: 02af1d902bb0f1f9fd83ea743179f920bc952e320b615f824b2b8746a358ec0e
+  sha256: 124c619723d06fcc5c6bd0a9073222907d5c285fdf2d9ed262c9bab94c53f958
 
 build:
   merge_build_host: true  # [win]
-  number: 1
+  number: 0
   noarch: generic
   rpaths:
     - lib/R/lib/
@@ -60,8 +60,7 @@ test:
 about:
   home: https://github.com/dcomtois/summarytools
   license: GPL-2
-  summary: Data frame summaries, cross-tabulations, weight-enabled frequency tables and common descriptive (univariate) statistics in concise tables available in
-    a variety of formats (plain ASCII, Markdown and HTML). A good point-of-entry for exploring data, both for experienced and new R users.
+  summary: Data frame summaries, cross-tabulations, weight-enabled frequency tables and common descriptive (univariate) statistics in concise tables available in a variety of formats (plain ASCII, Markdown and HTML). A good point-of-entry for exploring data, both for experienced and new R users.
   license_family: GPL2
   license_file:
     - {{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-2
