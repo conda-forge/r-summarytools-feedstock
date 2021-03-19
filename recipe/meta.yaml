@@ -59,7 +59,7 @@ test:
 
 about:
   home: https://github.com/dcomtois/summarytools
-  license: GPL-2
+  license: GPL-2.0-only
   summary: Data frame summaries, cross-tabulations, weight-enabled frequency tables and common descriptive (univariate) statistics in concise tables available in a variety of formats (plain ASCII, Markdown and HTML). A good point-of-entry for exploring data, both for experienced and new R users.
   license_family: GPL2
   license_file:
