@@ -1,4 +1,4 @@
-{% set version = "0.9.9" %}
+{% set version = "1.0.0" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,7 +10,7 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/summarytools_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/summarytools/summarytools_{{ version }}.tar.gz
-  sha256: 79e54d29024cd1eb9c5bd8eddd519429bbf8d1887a053f216f7635bae5dbe745
+  sha256: 7642df54dd3cfc6154b39b84b5f79c7eec0efcfdf32cf1d9c45652ee9df60c13
 
 build:
   merge_build_host: true  # [win]
