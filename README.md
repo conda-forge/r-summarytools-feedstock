@@ -1,11 +1,11 @@
-About r-summarytools
-====================
+About r-summarytools-feedstock
+==============================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-summarytools-feedstock/blob/main/LICENSE.txt)
 
 Home: https://github.com/dcomtois/summarytools
 
 Package license: GPL-2.0-only
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-summarytools-feedstock/blob/main/LICENSE.txt)
 
 Summary: Data frame summaries, cross-tabulations, weight-enabled frequency tables and common descriptive (univariate) statistics in concise tables available in a variety of formats (plain ASCII, Markdown and HTML). A good point-of-entry for exploring data, both for experienced and new R users.
 
