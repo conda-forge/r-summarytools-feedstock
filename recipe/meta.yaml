@@ -1,6 +1,5 @@
 {% set version = "1.0.1" %}
 {% set posix = 'm2-' if win else '' %}
-{% set native = 'm2w64-' if win else '' %}
 
 package:
   name: r-summarytools
@@ -13,8 +12,7 @@ source:
   sha256: fdf5a802321821777cebf1c8f3c81f700d690f3713be0eb4890d29191a2b293f
 
 build:
-  merge_build_host: true  # [win]
-  number: 2
+  number: 3
   noarch: generic
   rpaths:
     - lib/R/lib/
