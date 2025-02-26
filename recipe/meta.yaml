@@ -1,4 +1,4 @@
-{% set version = "1.1.0" %}
+{% set version = "1.1.1" %}
 {% set posix = 'm2-' if win else '' %}
 
 package:
@@ -9,7 +9,7 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/summarytools_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/summarytools/summarytools_{{ version }}.tar.gz
-  sha256: ea00909da07638c398641f24be62728e19e5393b11c8860eb62df6c568e39f48
+  sha256: b636b0d355310a9232fe374417a196c1690ec7899334115646f99cdc519d4aca
 
 build:
   number: 0
